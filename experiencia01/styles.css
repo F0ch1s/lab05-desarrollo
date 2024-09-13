@@ -1,0 +1,8 @@
+.form-background {
+    background-color: #7d99b5; /* Un gris claro */
+    padding: 20px; /* Añade algo de padding para espaciar el contenido */
+    border-radius: 8px; /* Opcional: Redondea los bordes del formulario */
+}
+body{
+    background-color: #b2cae1;
+}
