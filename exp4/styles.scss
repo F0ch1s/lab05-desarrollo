@@ -1,0 +1,69 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$light-bg: #f8f9fa;
+$font-stack: 'Arial, sans-serif';
+$cta-bg-color: #e9ecef;
+
+@mixin box-shadow($color, $x: 0px, $y: 4px, $blur: 12px) {
+  box-shadow: $x $y $blur $color;
+}
+
+body {
+  font-family: $font-stack;
+}
+
+.navbar {
+  background-color: $primary-color;
+  .nav-link {
+    color: white;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  .btn-primary {
+    background-color: $secondary-color;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+.cta {
+  background-color: $cta-bg-color;
+  .btn-primary {
+    @include box-shadow(rgba(0, 0, 0, 0.2), 0px, 5px, 15px);
+  }
+}
+
+.features {
+  .col-md-4 {
+    margin-bottom: 20px;
+    i {
+      font-size: 3rem;
+      color: $primary-color;
+    }
+    h3 {
+      margin-top: 10px;
+    }
+  }
+}
+
+.testimonials {
+  background-color: $light-bg;
+  blockquote {
+    font-size: 1.2rem;
+    border-left: 5px solid $primary-color;
+    padding-left: 15px;
+    color: $primary-color;
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  a {
+    color: white;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
