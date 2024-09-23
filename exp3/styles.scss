@@ -1,0 +1,67 @@
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$bg-color: #f8f9fa;
+$font-stack: 'Arial, sans-serif';
+$hover-color: darken($primary-color, 10%);
+
+
+.navbar {
+  background-color: $primary-color;
+  font-family: $font-stack;
+  
+  .nav-link {
+    color: white;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  
+  .dropdown-menu {
+    background-color: $bg-color;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    
+    .dropdown-item {
+      &:hover {
+        background-color: $hover-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.container {
+  background-color: $bg-color;
+  padding: 15px;
+}
+
+
+.form-control {
+  border-radius: 5px;
+}
+
+
+.card {
+  border-radius: 8px;
+  .card-header {
+    background-color: $primary-color;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: $secondary-color;
+    border: none;
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
